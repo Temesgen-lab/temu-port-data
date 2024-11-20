@@ -45,6 +45,22 @@ const close11 = document.querySelector(".close-icon11");
 const view12 = document.querySelector(".view-12");
 const pop12 = document.querySelector(".popup12");
 const close12 = document.querySelector(".close-icon12");
+const view = document.querySelectorAll(".btn");
+const close = document.querySelectorAll(".close");
+
+function overflowHidden() {
+  document.documentElement.style.overflow = "hidden";
+}
+function overflowAuto() {
+  document.documentElement.style.overflow = "auto";
+}
+
+for (let i = 0; i < view.length; i++) {
+  view[i].addEventListener("click", overflowHidden);
+}
+for (let i = 0; i < close.length; i++) {
+  close[i].addEventListener("click", overflowAuto);
+}
 
 function popUp1() {
   pop1.classList.toggle("visible");
